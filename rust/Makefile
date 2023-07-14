@@ -4,7 +4,7 @@ build:
 	docker-compose build
 
 run:
-	docker-compose run --rm app bash
+	docker-compose run --rm app cargo run
 
 init:
 	docker-compose run --rm app cargo init .
@@ -17,3 +17,9 @@ clean:
 
 deps:
 	docker-compose run app cargo build
+
+exec:
+	docker-compose run --rm app bash
+
+logs:
+	docker-compose logs -f
